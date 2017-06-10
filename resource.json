@@ -1,0 +1,20 @@
+{
+  "css": {
+    "style": [
+      "css/bootstrap.css",
+       "css/animate.css",
+       "css/font-awesome.css",
+       "css/fooduknow.css"
+    ]
+  },
+  "js": {
+    "js":[
+      "js/jquery.js",
+      "js/jquery-1.11.1.min.js",
+      "js/bootstrap.js",
+      "js/fooduknow.js",
+      "js/wow.js",
+      "js/jquery.nicescroll.js"
+    ]
+  }
+}
