@@ -14,7 +14,30 @@ $(function () {
     }
   });
 });
+function animateContent(direction) {
+  var animationOffset = $('.container1').height() - $('.content').height() - 30;
+  if (direction == 'up') {
+    animationOffset = 0;
+  }
 
+  $('.content').animate({ "marginTop": (animationOffset) + "px" }, 5000);
+}
+
+function up() {
+  animateContent("up")
+}
+
+
+function start() {
+  setTimeout(function () {
+    down();
+  }, 2000);
+  setTimeout(function () {
+    up();
+  }, 2000);
+  setTimeout(function () {
+  }, 5000);
+}
 
 $(document).ready(
 
@@ -32,6 +55,13 @@ $(document).ready(
       cursorborderradius: "0px"
     });
 
+    if ($('.content').height() > $('.container1').height()) {
+      setInterval(function () {
+        start();
+      }, 3000);
+
+    }
+
     wow = new WOW(
       {
         animateClass: 'animated',
@@ -44,6 +74,12 @@ $(document).ready(
     $(document).click(function () {
       $(".mega-menu").hide();
     });
+
+    var div = $('#newsfeed');
+    setInterval(function () {
+      var pos = div.scrollTop();
+      div.scrollTop(pos + 2);
+    }, 200)
 
 
     $('#artificial-sweetner,#brown-rice,#healthy-bacteria,#seaweed,#chocolatey,#synbiotics,#turmeric-milk,#oil-less-fry,#quick-freeze,#irradiating-food,#green-tea').click(function () {
