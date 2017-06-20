@@ -71,6 +71,33 @@ $(document).ready(
     );
     wow.init();
 
+    $('#tbl-chocolate').show();
+    $('#mr-chocolate').css('color', '#ccc');
+
+    $('#mr-greentea').on('click', function () {
+      $('#tbl-chocolate,#tbl-yogurt,#tbl-brownrice').hide();
+      $('#tbl-greentea').show();
+      $('#mr-chocolate').css('color', 'white');
+    });
+
+    $('#mr-yogurt').on('click', function () {
+      $('#tbl-chocolate,#tbl-greentea,#tbl-brownrice').hide();
+      $('#tbl-yogurt').show();
+      $('#mr-chocolate').css('color', 'white');
+    });
+
+    $('#mr-brownrice').on('click', function () {
+      $('#tbl-chocolate,#tbl-yogurt,#tbl-greentea').hide();
+      $('#tbl-brownrice').show();
+      $('#mr-chocolate').css('color', 'white');
+    });
+
+    $('#mr-chocolate').on('click', function () {
+      $('#tbl-brownrice,#tbl-yogurt,#tbl-greentea').hide();
+      $('#tbl-chocolate').show();
+      $('#mr-chocolate').css('color', '#ccc');
+    });
+
     $(document).click(function () {
       $(".mega-menu").hide();
     });
