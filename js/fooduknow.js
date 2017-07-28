@@ -7,13 +7,14 @@ $(function () {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - '150'
         }, 1000);
         return false;
       }
     }
   });
 });
+
 function animateContent(direction) {
   var animationOffset = $('.container1').height() - $('.content').height() - 30;
   if (direction == 'up') {
@@ -39,9 +40,49 @@ function start() {
   }, 5000);
 }
 
+function scrollUptoTop(){
+$('#gotop').gotop({
+
+  // Background color
+  background : '#000', 
+
+  // Icon color
+  color: '#fff', 
+
+  // Rounded button?
+  rounded: true, 
+
+  // width/height
+  width: '45px',
+  height: '45px',
+
+  // bottom position
+  bottom : '25px',
+
+  // right position
+  right : '25px',
+
+  // Window height after which show the button
+  Show: 300, 
+
+  // animation speed
+  speed: 800,
+
+  // custom html for the back to top button
+  customHtml:'',
+
+  // Show button only on mobile device
+  mobileOnly: false,
+ 
+  
+});
+
+}
+
 $(document).ready(
 
   function () {
+    $(this).scrollTop(0);
     $('#header-top').load('nav.html');
     $('#footer-bottom').load('footer.html');
     $('#header-top-articles').load('../nav.html');
@@ -71,31 +112,33 @@ $(document).ready(
     );
     wow.init();
 
-    $('#tbl-chocolate').show();
-    $('#mr-chocolate').css('color', '#ccc');
+    scrollUptoTop();
+
+    $('#tbl-yogurt').show();
+    $('#mr-yogurt').css('color', 'rgb(244, 248, 131)');
 
     $('#mr-greentea').on('click', function () {
       $('#tbl-chocolate,#tbl-yogurt,#tbl-brownrice').hide();
       $('#tbl-greentea').show();
-      $('#mr-chocolate').css('color', 'white');
+      $('#mr-yogurt').css('color', 'white');
     });
 
     $('#mr-yogurt').on('click', function () {
       $('#tbl-chocolate,#tbl-greentea,#tbl-brownrice').hide();
       $('#tbl-yogurt').show();
-      $('#mr-chocolate').css('color', 'white');
+      $('#mr-yogurt').css('color', 'rgb(244, 248, 131)');
     });
 
     $('#mr-brownrice').on('click', function () {
       $('#tbl-chocolate,#tbl-yogurt,#tbl-greentea').hide();
       $('#tbl-brownrice').show();
-      $('#mr-chocolate').css('color', 'white');
+      $('#mr-yogurt').css('color', 'white');
     });
 
     $('#mr-chocolate').on('click', function () {
       $('#tbl-brownrice,#tbl-yogurt,#tbl-greentea').hide();
       $('#tbl-chocolate').show();
-      $('#mr-chocolate').css('color', '#ccc');
+      $('#mr-yogurt').css('color', 'white');
     });
 
     $(document).click(function () {
@@ -109,7 +152,7 @@ $(document).ready(
     }, 200)
 
 
-    $('#artificial-sweetner,#brown-rice,#healthy-bacteria,#seaweed,#chocolatey,#synbiotics,#turmeric-milk,#oil-less-fry,#quick-freeze,#irradiating-food,#green-tea').click(function () {
+    $('#artificial-sweetner,#brown-rice,#healthy-bacteria,#seaweed,#chocolatey,#synbiotics,#turmeric-milk,#oil-less-fry,#quick-freeze,#irradiating-food,#green-tea,#green-tea1').click(function () {
       $('#div-' + this.id).slideToggle("slow");
       $(this).text(function (i, text) {
         return text === "Read More" ? "Read Less" : "Read More";
@@ -128,6 +171,7 @@ $(document).ready(
 /*Preloader*/
 //<![CDATA[
 $(window).load(function () { // makes sure the whole site is loaded
+  $(window).scrollTop(0)
   $('#status').fadeOut(); // will first fade out the loading animation
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
   $('body').delay(350).css({ 'overflow': 'visible' });

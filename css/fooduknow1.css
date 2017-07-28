@@ -2,8 +2,10 @@
 body{
     font-family: 'Dosis', sans-serif;
     background-color: rgba(0,0,0,.075);
-    /*background-image: url(../img/home4.jpg);*/
     background-attachment: fixed;
+    background-image: url('../img/home4.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 body img{
@@ -21,39 +23,57 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'Dosis', sans-serif;
 }
 
-.navbar-wrapper a,.fa-caret-down{
+.reduce-space{
+    padding: 0px !important;
+}
+.navbar-wrapper a{
+    color: white !important;
+    height: 68px;
+    padding-top:20px !important;
+}
+
+.navbar-inverse{
+background-color: #080808;
+}
+
+.navbar-wrapper li{
     color: white !important;
 }
 
+.navbar-brand img{
+height: 60px;
+border-radius: 0px !important;
+}
+.navbar-brand{
+padding-top:7px !important;
+}
 .navbar-right{
-    font-size: 16px;
+    font-size: 19px;
+    
+}
+#top-nav{
+    height: 73px;
 }
 
 #home{
-margin:65px 20px 40px;
+   margin-top:53px;
+   padding: 0;
 }
 
 #myCarousel, #myCarousel img{
-    padding: 0px;
-    height: 500px;
-    width:700px;
+    height:550px;
+    border-radius: 0 !important;
+    width:100%;
 }
-
-
-
-.home-img{
-    background: url(../img/home.jpg) no-repeat center #acebbc;
-    margin-top:52px;
-    width:1300px;
-    height:570px;
-}
-
 
 h2{
     font-weight: bold;
     text-transform: uppercase;
 }
 
+#articles{
+    background-color: rgba(165, 42, 42, 0.76)
+}
 .articles-list{
     font-family: 'Lato', sans-serif;
     font-size: 17px;
@@ -65,6 +85,39 @@ h2{
 
 .articles-list ul ul{
     list-style: square;
+}
+
+#category img{
+    width:100%;
+    height: 550px;
+    border-radius: 0 !important;
+    position: relative;
+   
+}
+.list-opportunties{
+     right: 277px;
+    top: 955px;
+    position: absolute;
+    color: black;
+    font-size: 21px;
+}
+.list-be-safe {
+    right: 270px;
+    top: 1070px;
+    position: absolute;
+    color: black;
+    font-size: 17px;
+}
+
+.list-healthy-food{
+    right: 475px;
+    top: 1179px;
+    position: absolute;
+    color: black;
+    font-size: 17px;
+}
+.list-be-safe a, .list-healthy-food a{
+    color:black !important;
 }
 .mt-20{
     margin-top: 20px;
@@ -78,20 +131,25 @@ h2{
     padding:2%;
 }
 
+
 #about_us p{
-font-size: 16px;
+font-size: 25px;
 text-align: justify;
+font-family: 'Cookie';
+line-height: 1.3
 }
 
 #about_us li{
-font-size: 17px;
+font-size: 25px;
+font-family: 'Cookie';
 }
 
 .about{
     margin-top:7%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.79);
     color: black;
-    padding: 5%;
+    padding: 3% 5%;
+    border: 20px groove #595252;
 }
 
 
@@ -133,18 +191,34 @@ font-size: 17px;
     color:black;
 }
 
+.top-layer{
+ background-image: url(../img/healthy-food-background.jpg);
+ background-attachment: fixed;
+ padding: 0;
+}
 
 .section_overlay{
-    background: rgba(71,71,71,.85);
+    background: rgba(71, 71, 71, 0.5);
     color:white;
+   
 }
 
 .section_overlay>section{
     margin-bottom: 5%;
 }
+.home-articles{
+    padding-top: 30px;
+}
+
+.home-articles h2{
+text-transform: initial;
+font-size: 29px;
+    font-weight: 600;
+}
+
 
 #articles p{
-    font-size: 16px;
+    font-size: 15px;
     text-align: justify;
 }
 
@@ -153,8 +227,12 @@ font-size: 17px;
     height: 100%;
 }
 
-#articles>div{
-    margin-top:4%;
+#articles>div, .mt-4{
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+#articles a{
+    color:white;
 }
 
 .dropdown-menu>li>a :hover, .dropdown-menu>li>a :focus{
@@ -202,7 +280,7 @@ ul.icons li {
 }
 
 .tbl-marketing-research tbody{
-    background-color:#ccc;
+    background-color:#dff0d8;
 }
 
 #market-research a{
@@ -213,17 +291,21 @@ ul.icons li {
 }
 
 #market-research a:focus{
-    color: #ccc;
+    color: rgb(244, 248, 131);
 }
 
 /*Articles CSS*/
 
 .articles-inner-section{
-    background-color:rgba(0,0,0,.5);
+    background-color:rgba(0, 0, 0, 0.87);
     color:white;
     padding:5%;
     margin:100px 60px;
     text-align: justify;
+}
+
+.articles-inner-section h2{
+    padding-bottom: 4%;
 }
 
 .articles-inner-section img{
@@ -240,9 +322,12 @@ color:white;
 }
 
 .articles-inner-section>div{
-    margin-bottom: 5%;
+    margin-bottom: 7%;
 }
 
+.articles-details img{
+    width: 100%;
+}
 .read-more ,.read-more :hover, .read-more :focus{
     border:1px solid white;
     padding:5px;
@@ -253,7 +338,6 @@ color:white;
 
 .articles-home{
     text-align: center;
-    margin: 
 }
 
 .articles-home h2 {
@@ -306,22 +390,22 @@ hr .separator {
     color:black;
 }
 
-
-.articles-inner-section h3, .articles-inner-section h4{
-    margin-left:17px;
-}
-
 .mega-menu {
    background: none repeat scroll 0 0 #888;
     right: -268px;
     margin-top: 3px;
     position: absolute;
-    width: 489px;
+    width: 530px;
 	padding:15px 0;
 	transition-duration: 0.9s;
     display: none;
+    font-size:17px !important;
     
 }
+.mega-menu li a{
+    padding-top: 0!important
+}
+
 #menutoggle i {
     color: #fff;
     font-size: 33px;
@@ -338,8 +422,14 @@ hr .separator {
 width: 500px !important;
 }
 
+.opportunties-img{
+    background-image: url('../img/job.jpg');
+    height: 330px;
+    width: 100%;
+    }
+
 .opportunities{
-margin-top: 100px;
+margin-top: 50px;
 font-weight: 600;
 }
 
@@ -353,14 +443,10 @@ font-weight: 600;
 }
 
 
-.carousel-control{
-    border-radius: 25px;
-}
-
 #newsfeed{
     height:350px;
     overflow: hidden;
-    width:550px;
+    width:45%;
     margin: 20px;
     text-align: justify;
     padding-left: 90px;
@@ -371,7 +457,7 @@ font-weight: 600;
 }
 
 .opportunities-categories{
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left:50px;
 }
 
@@ -383,9 +469,97 @@ font-weight: 600;
 .opportunities-categories h3{
     margin-left:24px;
 }
+.opportunities-categories li{
+    display: inline;
+    margin:14px;
+}
 
 .news-and-updates{
     margin-top:100px;
     margin-bottom: 100px;
     text-align: justify;
+}
+
+.color-grey{
+    background-color:gainsboro;
+    margin-bottom: 40px;
+    border:1px groove dimgrey;
+    min-height: 450px;
+    padding:3%
+}
+
+.about-people{
+background-color:  rgba(94, 106, 125, 0.7);
+}
+
+.scroll-top{
+    display: flex;
+    border-radius: 50%; 
+    cursor: pointer; 
+    position: fixed; 
+    align-items: center; 
+    justify-content: center; 
+    background: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    width: 45px; 
+    height: 45px; 
+    bottom: 2em; 
+    right: 2em;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px)
+{
+    #newsfeed{
+        padding-left: 35px;
+        margin-right: 0px;
+    }
+    #articles img{
+        margin-top:30px;
+    }
+    #about_us p, #articles p{
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    #about_us li{
+        font-size: 17px;
+    }
+
+    #articles .container{
+        padding: 0 ;
+    }
+
+    .list-opportunties{
+        right: 180px;
+        top: 800px;
+    }
+
+    .list-be-safe{
+        right: 160px;
+        top: 920px;
+    }
+    .list-healthy-food{
+         right: 330px;
+         top: 1023px;
+    }
+}
+
+@media screen and (max-width: 767px) 
+{
+    #myCarousel, #myCarousel img{
+        height: 380px;
+        width:85%;
+    }
+
+    #newsfeed{
+        height:auto;
+        width:auto;
+        padding: 0;
+    }
+     #about_us p, #articles p,#about_us li{
+        font-size: 13px;
+    }
+      #articles img{
+       margin-top:20px;
+    }
 }

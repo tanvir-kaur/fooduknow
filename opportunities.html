@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Food you know</title>
+	<link rel="shortcut icon" href="./img/home.ico" />
 
 	<!-- Google Font -->
 	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
 		<![endif]-->
 </head>
 
-<body>
+<body style="background-image: none;">
 	<div id="preloader">
 		<div id="status">&nbsp;</div>
 	</div>
@@ -35,20 +36,21 @@
 	</header>
 
 	<section>
-		<div class="col-sm-3 opportunities-categories">
-			<h3>Categories</h3>
+		<div class="container-fluid opportunties-img">
+		</div>
+		<div class="col-sm-11 opportunities-categories">
 			<ul>
-				<li><a href="javacript:void(0);"> Dairy Industry </a></li>
-				<li><a href="#beverage-industry">Beverage Industry </a></li>
-				<li><a href="#bakery-industry">Bakery industry</a></li>
-				<li><a href="javacript:void(0);">Fish & Meat industry</a> </li>
-				<li><a href="javacript:void(0);">Oil Industry</a> </li>
-				<li><a href="javacript:void(0);">Spice Industry</a></li>
-				<li><a href="javacript:void(0);">Ingredients & Flavor industry</a> </li>
-				<li> <a href="#miscellaneous">Miscellaneous</a> </li>
+				<li><a href="javacript:void(0);" class="btn btn-primary"> Dairy Industry </a></li>
+				<li><a href="#beverage-industry" class="btn btn-primary">Beverage Industry </a></li>
+				<li><a href="#bakery-industry" class="btn btn-primary">Bakery industry</a></li>
+				<li><a href="javacript:void(0);" class="btn btn-primary">Fish & Meat industry</a> </li>
+				<li><a href="javacript:void(0);" class="btn btn-primary">Oil Industry</a> </li>
+				<li><a href="javacript:void(0);" class="btn btn-primary">Spice Industry</a></li>
+				<li><a href="javacript:void(0);" class="btn btn-primary">Ingredients & Flavor industry</a> </li>
+				<li> <a href="#miscellaneous" class="btn btn-primary">Miscellaneous</a> </li>
 			</ul>
 		</div>
-		<div class="col-sm-7 opportunities">
+		<div class="col-sm-8 col-sm-offset-2 opportunities">
 			<h2 class="text-center">Current Opportunities</h2>
 			<table class="table table-responsive table-bordered table-striped" id="beverage-industry">
 				<thead>
@@ -212,9 +214,10 @@
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.gotop.js"></script>
 	<script src="../js/jquery.nicescroll.js"></script>
 	<script src="../js/fooduknow.js"></script>
 	<script src="../js/wow.js"></script>
 </body>
 
-</html>
+</html>		
